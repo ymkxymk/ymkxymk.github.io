@@ -1,0 +1,60 @@
+<!-- Спиздил у флийда -->
+
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ачо">
+        <title>amore</title>
+        <link href="https://fl1yd.su/assets/images/icon.png" rel="icon">
+        <link href="./yumaka/style.css" rel="stylesheet">
+        <title></title>
+    </head>
+    <body>
+        <main>
+            <div class="info">
+                <img src="./yumaka/photo_2023-01-19_22-27-12.jpg" alt="avatar.png">
+                <p>YUMAKA (<b><span class="color">юмака</span></b>, а не <span id="typed"></span>)</p>
+                <span>Привет, меня зовут юмака и мне я сам хз сколько мне.</span>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li><a href="https://t.me/yumakaxd">TELEGRAM</a></li>
+                    <li><span class="color">•</span></li>
+                    <li><a id="button" href="https://github.com/yumakameow">GITHUB</a></li>
+                    <li><span class="color">•</span></li>
+                    <li><a id="button" href="https://t.me/i18yo">BIO</a></li>
+                </ul>
+            </div>
+        </main>
+        <canvas id="canvas" width="790" height="436"></canvas>
+    
+    <script src="./yumaka/particles.js"></script>
+    <script src="./yumaka/script.js"></script>
+    <script src="./yumaka/typed.js@2.0.12"></script>
+    <script src="./yumaka/jquery-3.6.1.js"></script>
+    <script>
+        $(document).click(function(event) {
+            if (document.getElementById("donate").style.display != "none") {
+                if (!$(event.target).closest(".popup").length) {
+                    return $("#donate").fadeOut();
+                }
+            }
+
+            if ($(event.target).closest("#button").length) {
+                return $("#donate").fadeIn();
+            }
+        });
+
+        var typed = new Typed(
+            '#typed', {
+                strings: ["ямака", "умка", "умака"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                showCursor: false,
+                loop: true
+            }
+        );
+    </script>
+
+</body></html>
